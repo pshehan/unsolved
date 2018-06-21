@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { Article } from '../../components/Article'
 import Jumbotron from "../../components/Jumbotron";
-import { H1, H3 } from '../../components/Headings';
 import { Container, Row, Col } from "../../components/Grid";
 import { Panel, PanelHeading, PanelBody } from '../../components/Panel'
 
@@ -45,12 +44,12 @@ export default class SavedArticles extends Component {
         <Row>
           <Col size="sm-10" offset='sm-1'>
             <Jumbotron>
-              <H1 className="text-center">Saved New York Times Articles</H1>
-              <hr style={{width: '60%'}}/>
+            <h1 className='page-header text-center'>Skrape the Times</h1>
+            <h3 className='text-center'>Search, Save Articles So You Can Appear Smart in Front of Colleagues.</h3>
             </Jumbotron>
             <Panel>
               <PanelHeading>
-                <H3>Saved Articles</H3>
+                <h3>Saved Articles</h3>
               </PanelHeading>
               <PanelBody>
                 { this.state.savedArticles.length > 0 ?
@@ -65,7 +64,7 @@ export default class SavedArticles extends Component {
                       onClick={() => this.deleteArticle(article._id)}
                     />
                     )
-                  )) : <H1>You have no saved articles.</H1>
+                  )) : <h1>You have no saved articles.</h1>
                 }
               </PanelBody>
             </Panel>

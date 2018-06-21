@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { Article } from '../../components/Article'
 import Jumbotron from "../../components/Jumbotron";
-import { H1, H3, H4 } from '../../components/Headings';
+// import { H1, H3, H4 } from '../../components/Headings';
 import { Container, Row, Col } from "../../components/Grid";
 import { Panel, PanelHeading, PanelBody } from '../../components/Panel';
 import { Form, Input, FormBtn, FormGroup, Label } from "../../components/Form";
@@ -123,12 +123,12 @@ export default class Articles extends Component {
         <Row>
           <Col size="sm-10" offset='sm-1'>
             <Jumbotron>
-              <H1 className='page-header text-center'>Skrape the Times</H1>
-              <H4 className='text-center'>Search, Save Articles So You Can Appear Smart in Front of Colleagues.</H4>
+              <h1 className='page-header text-center'>Skrape the Times</h1>
+              <h3 className='text-center'>Search, Save Articles So You Can Appear Smart in Front of Colleagues.</h3>
             </Jumbotron>
             <Panel>
               <PanelHeading>
-                <H3>Search</H3>
+                <h3>Search</h3>
               </PanelHeading>
               <PanelBody>
                 <Form style={{marginBottom: '30px'}}>
@@ -171,11 +171,11 @@ export default class Articles extends Component {
               </PanelBody>
             </Panel>
             { this.state.noResults ?
-              (<H1>No results Found.</H1>) :
+              (<h1>No results Found.</h1>) :
               this.state.results.length>0 ? (
                 <Panel>
                   <PanelHeading>
-                    <H3>Results</H3>
+                    <h3>Results</h3>
                   </PanelHeading>
                   <PanelBody>
                     {

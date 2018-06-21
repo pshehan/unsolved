@@ -5,5 +5,17 @@
 .jumbotron {
 	background-image: url("bg.jpg");
 	position: relative;
-	width: 100%;
+    width: 100%;
+    
+}
+
+.btn 
+{
+        color: 'red';
+        position: relative;
+        text-align: center;
+        width: 100px;
+        margin: 20px;
+    left: 300px;
+            /* padding-left: 200px; */
 }
