@@ -17,8 +17,12 @@ app.use(express.static(path.join(__dirname, "client/build")));
 app.use(routes);
 
 // Database configuration
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reax");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/react";
 
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 // Start the API server
 const PORT = process.env.PORT || 3003;
